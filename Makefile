@@ -1,15 +1,23 @@
-all: bis flexeo compilacion
-bis:
-	bison -d Simple.y
-compilacion:
-	gcc -c Simple.tab.c
-	gcc -c lex.yy.c
+all: Simple Simple.tab.o lex.yy.o
 	gcc -o Simple Simple.tab.o lex.yy.o -lm
-flexeo:
+
+Simple.tab.o: Simple.tab.c
+	gcc -c Simple.tab.c
+
+Simple.tab.c: Simple.y
+	bison -d Simple.y
+
+lex.yy.o: lex.yy.c
+	gcc -c lex.yy.c
+
+lex.yy.c: Simple.lex
 	flex Simple.lex
-ejecutar:
-	Simple test_simple
-clean: 
-	rm lex.yy.c
-	rm Simple.tab.c
-	rm Simple.tab.h
+
+clean:
+	rm *.tab.c
+	rm *.tab.h
+	rm *.yy.c
+	rm *.o
+
+try: Simple test_simple
+	./Simple test_simple

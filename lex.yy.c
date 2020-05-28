@@ -497,11 +497,11 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "Simple.l"
+#line 1 "Simple.lex"
 /***************************************************************************
 		Scanner for the Simple language
 ***************************************************************************/
-#line 5 "Simple.l"
+#line 5 "Simple.lex"
 /*=========================================================================
 		C-libraries and Token definitions
 =========================================================================*/
@@ -732,7 +732,7 @@ YY_DECL
 		}
 
 	{
-#line 20 "Simple.l"
+#line 20 "Simple.lex"
 
 #line 738 "lex.yy.c"
 
@@ -793,100 +793,100 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 21 "Simple.l"
+#line 21 "Simple.lex"
 { return(ASSGNOP); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 22 "Simple.l"
+#line 22 "Simple.lex"
 { yylval.intval = atoi( yytext );
 	return(NUMBER);}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 24 "Simple.l"
+#line 24 "Simple.lex"
 { return(DO);}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 25 "Simple.l"
+#line 25 "Simple.lex"
 { return(ELSE);}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 26 "Simple.l"
+#line 26 "Simple.lex"
 { return(END);}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 27 "Simple.l"
+#line 27 "Simple.lex"
 { return(FI);}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 28 "Simple.l"
+#line 28 "Simple.lex"
 { return(IF);}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 29 "Simple.l"
+#line 29 "Simple.lex"
 { return(IN);}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 30 "Simple.l"
+#line 30 "Simple.lex"
 { return(INTEGER); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 31 "Simple.l"
+#line 31 "Simple.lex"
 { return(LET);}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 32 "Simple.l"
+#line 32 "Simple.lex"
 { return(READ);}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 33 "Simple.l"
+#line 33 "Simple.lex"
 { return(SKIP);}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 34 "Simple.l"
+#line 34 "Simple.lex"
 { return(THEN);}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 35 "Simple.l"
+#line 35 "Simple.lex"
 { return(WHILE);}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 36 "Simple.l"
+#line 36 "Simple.lex"
 { return(WRITE);}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 37 "Simple.l"
+#line 37 "Simple.lex"
 { yylval.id = (char *) strdup(yytext);
 	  return(IDENTIFIER);}
 	YY_BREAK
 case 17:
 /* rule 17 can match eol */
 YY_RULE_SETUP
-#line 39 "Simple.l"
+#line 39 "Simple.lex"
 /* eat up whitespace */
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 40 "Simple.l"
+#line 40 "Simple.lex"
 { return(yytext[0]);}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 41 "Simple.l"
+#line 41 "Simple.lex"
 ECHO;
 	YY_BREAK
 #line 893 "lex.yy.c"
@@ -1890,7 +1890,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 41 "Simple.l"
+#line 41 "Simple.lex"
 
 
 int yywrap(void){}
